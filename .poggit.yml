@@ -5,4 +5,7 @@ branches:
 projects:
   BlockGenerator:
     path: ""
+    libs:
+      - src: NhanAZ/libBedrock/libBedrock
+        version: 1.0.0
 ...
