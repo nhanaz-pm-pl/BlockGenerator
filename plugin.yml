@@ -1,6 +1,6 @@
 ---
 name: BlockGenerator
-version: 0.0.1
+version: 0.0.2
 main: NhanAZ\BlockGenerator\Main
 api: 5.0.0
 
