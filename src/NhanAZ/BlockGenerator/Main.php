@@ -6,6 +6,7 @@ namespace NhanAZ\BlockGenerator;
 
 use NhanAZ\libBedrock\StringToBlock;
 use pocketmine\block\Block;
+use pocketmine\block\BlockTypeIds;
 use pocketmine\block\Fence;
 use pocketmine\block\Liquid;
 use pocketmine\block\VanillaBlocks;
@@ -142,7 +143,7 @@ class Main extends PluginBase implements Listener {
 								}
 							}
 						}
-						if ($block->isSameType(VanillaBlocks::AIR()) or $block->isSameType(VanillaBlocks::WATER())) {
+						if ($block->getTypeId() === BlockTypeIds::AIR or $block->getTypeId() === BlockTypeIds::WATER) {
 							if ($delayTime > 0) {
 								$this->getScheduler()->scheduleDelayedTask(new ClosureTask(function () use ($block): void {
 									$this->setBlock($block->getPosition());
@@ -168,7 +169,7 @@ class Main extends PluginBase implements Listener {
 								}
 							}
 						}
-						if ($block->isSameType(VanillaBlocks::AIR()) or $block->isSameType(VanillaBlocks::WATER())) {
+						if ($block->getTypeId() === BlockTypeIds::AIR or $block->getTypeId() === BlockTypeIds::WATER) {
 							if ($delayTime > 0) {
 								$this->getScheduler()->scheduleDelayedTask(new ClosureTask(function () use ($block): void {
 									$this->setBlock($block->getPosition());
